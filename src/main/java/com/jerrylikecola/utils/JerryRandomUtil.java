@@ -45,7 +45,9 @@ public class JerryRandomUtil {
         int realHour = 18;
         int realMinute = 30;
         Calendar now = Calendar.getInstance();
-        if (now.get(Calendar.HOUR_OF_DAY)<=realHour&&now.get(Calendar.MINUTE)<realMinute) {
+        boolean isNotOffTime = now.get(Calendar.HOUR_OF_DAY)<realHour||
+                            (now.get(Calendar.HOUR_OF_DAY)==realHour&&now.get(Calendar.MINUTE)<realMinute);
+        if (isNotOffTime) {
             int second = 60 - now.get(Calendar.SECOND);
             if (now.get(Calendar.MINUTE) <= realMinute-1) {
                 int minute = 29 - now.get(Calendar.MINUTE);
