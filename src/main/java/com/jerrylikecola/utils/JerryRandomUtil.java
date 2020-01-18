@@ -38,6 +38,30 @@ public class JerryRandomUtil {
     }
 
     /**
+     * 恶搞计算下班时间
+     * @return
+     */
+    public static String getTimeWhenOffTime() {
+        int realHour = 18;
+        int realMinute = 30;
+        Calendar now = Calendar.getInstance();
+        if (now.get(Calendar.HOUR_OF_DAY)<=realHour&&now.get(Calendar.MINUTE)<realMinute) {
+            int second = 60 - now.get(Calendar.SECOND);
+            if (now.get(Calendar.MINUTE) <= realMinute-1) {
+                int minute = 29 - now.get(Calendar.MINUTE);
+                int hour = 18 - now.get(Calendar.HOUR_OF_DAY);
+                return hour+" h "+ + minute+" min "+ + second+" s ";
+            } else {
+                int minute = 89 - now.get(Calendar.MINUTE);
+                int hour = 17 - now.get(Calendar.HOUR_OF_DAY);
+                return hour+" h "+ + minute+" min "+ + second+" s ";
+            }
+        }else {
+            return "已经下班啦";
+        }
+    }
+
+    /**
      * get now date time
      * @return
      */
