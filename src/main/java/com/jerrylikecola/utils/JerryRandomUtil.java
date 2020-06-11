@@ -10,6 +10,7 @@ import java.util.Calendar;
  * @description class for any random number
  */
 
+@Deprecated
 public class JerryRandomUtil {
 
     /**
@@ -67,7 +68,7 @@ public class JerryRandomUtil {
      * get now date time
      * @return
      */
-    private static String getDateTime(){
+    public static String getDateTime(){
         Calendar now = Calendar.getInstance();
 
         String year = String.valueOf(now.get(Calendar.YEAR));
