@@ -10,7 +10,6 @@ import java.util.Calendar;
  * @description class for any random number
  */
 
-@Deprecated
 public class JerryRandomUtil {
 
     /**

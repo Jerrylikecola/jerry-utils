@@ -13,7 +13,7 @@ public class NumberHelper {
 
     /**
      * tip+date+random
-     * @param yourTip
+     * @param yourTip Special logo
      * @return
      */
     public static String getWithYourTipAndNumber(String yourTip){
